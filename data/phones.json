@@ -1,0 +1,296 @@
+{
+  "phones": [
+    {
+      "id": 1,
+      "name": "iPhone 14 Pro Max",
+      "brand": "Apple",
+      "model": "A2896",
+      "price": 4500000,
+      "price_formatted": "UGX 4,500,000",
+      "condition": "New",
+      "storage": "256GB",
+      "ram": "6GB",
+      "color": "Deep Purple",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-2.jpg"
+      ],
+      "description": "Brand new iPhone 14 Pro Max with Dynamic Island, A16 Bionic chip, and 48MP camera.",
+      "features": [
+        "6.7-inch Super Retina XDR display",
+        "A16 Bionic chip",
+        "48MP Main camera",
+        "5G capable",
+        "Face ID",
+        "iOS 16"
+      ],
+      "in_stock": true,
+      "quantity": 5
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "model": "SM-S918B",
+      "price": 4200000,
+      "price_formatted": "UGX 4,200,000",
+      "condition": "New",
+      "storage": "512GB",
+      "ram": "12GB",
+      "color": "Phantom Black",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-5g.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-5g.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-.jpg"
+      ],
+      "description": "The ultimate Android phone with built-in S Pen and 200MP camera.",
+      "features": [
+        "6.8-inch Dynamic AMOLED 2X display",
+        "Snapdragon 8 Gen 2",
+        "200MP Main camera",
+        "Built-in S Pen",
+        "5000mAh battery",
+        "IP68 water resistant"
+      ],
+      "in_stock": true,
+      "quantity": 3
+    },
+    {
+      "id": 3,
+      "name": "Tecno Camon 20 Pro",
+      "brand": "Tecno",
+      "model": "CK8n",
+      "price": 850000,
+      "price_formatted": "UGX 850,000",
+      "condition": "New",
+      "storage": "256GB",
+      "ram": "8GB",
+      "color": "Dark Welkin",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/tecno-camon-20-pro.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/tecno-camon-20-pro.jpg"
+      ],
+      "description": "Mid-range champion with great cameras and fast charging.",
+      "features": [
+        "6.67-inch AMOLED display",
+        "MediaTek G99 processor",
+        "64MP triple camera",
+        "33W fast charging",
+        "5000mAh battery",
+        "Android 13"
+      ],
+      "in_stock": true,
+      "quantity": 10
+    },
+    {
+      "id": 4,
+      "name": "iPhone 13 Pro",
+      "brand": "Apple",
+      "model": "MLVQ3LL/A",
+      "price": 2800000,
+      "price_formatted": "UGX 2,800,000",
+      "condition": "Refurbished",
+      "storage": "256GB",
+      "ram": "6GB",
+      "color": "Sierra Blue",
+      "battery_health": "92%",
+      "warranty": "6 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-2.jpg"
+      ],
+      "description": "Professionally refurbished iPhone 13 Pro in excellent condition.",
+      "features": [
+        "6.1-inch Super Retina XDR with ProMotion",
+        "A15 Bionic chip",
+        "Pro camera system",
+        "5G capable",
+        "New battery installed"
+      ],
+      "in_stock": true,
+      "quantity": 2
+    },
+    {
+      "id": 5,
+      "name": "Samsung A54 5G",
+      "brand": "Samsung",
+      "model": "SM-A546E",
+      "price": 950000,
+      "price_formatted": "UGX 950,000",
+      "condition": "New",
+      "storage": "128GB",
+      "ram": "8GB",
+      "color": "Awesome Lime",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a54-5g.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a54-5g.jpg"
+      ],
+      "description": "Best mid-range Samsung with 5G and great display.",
+      "features": [
+        "6.4-inch Super AMOLED 120Hz",
+        "Exynos 1380",
+        "50MP triple camera",
+        "5G connectivity",
+        "5000mAh battery",
+        "IP67 water resistant"
+      ],
+      "in_stock": true,
+      "quantity": 7
+    },
+    {
+      "id": 6,
+      "name": "Infinix Note 30",
+      "brand": "Infinix",
+      "model": "X6835B",
+      "price": 550000,
+      "price_formatted": "UGX 550,000",
+      "condition": "New",
+      "storage": "128GB",
+      "ram": "8GB",
+      "color": "Magic Black",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-30.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-30.jpg"
+      ],
+      "description": "Budget king with huge battery and stereo speakers.",
+      "features": [
+        "6.78-inch FHD+ display",
+        "MediaTek Helio G99",
+        "64MP dual camera",
+        "45W fast charging",
+        "6000mAh battery",
+        "Dual speakers"
+      ],
+      "in_stock": true,
+      "quantity": 15
+    },
+    {
+      "id": 7,
+      "name": "iPhone 12",
+      "brand": "Apple",
+      "model": "A2403",
+      "price": 1500000,
+      "price_formatted": "UGX 1,500,000",
+      "condition": "Refurbished",
+      "storage": "64GB",
+      "ram": "4GB",
+      "color": "Product Red",
+      "battery_health": "88%",
+      "warranty": "3 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg"
+      ],
+      "description": "Refurbished iPhone 12 with new screen and battery.",
+      "features": [
+        "6.1-inch Super Retina XDR",
+        "A14 Bionic",
+        "Dual 12MP cameras",
+        "MagSafe compatible",
+        "5G capable",
+        "iOS 16"
+      ],
+      "in_stock": true,
+      "quantity": 4
+    },
+    {
+      "id": 8,
+      "name": "Itel S23",
+      "brand": "Itel",
+      "model": "S665L",
+      "price": 380000,
+      "price_formatted": "UGX 380,000",
+      "condition": "New",
+      "storage": "64GB",
+      "ram": "4GB",
+      "color": "Neon Cyan",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/itel-s23.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/itel-s23.jpg"
+      ],
+      "description": "Affordable smartphone with good specs for daily use.",
+      "features": [
+        "6.6-inch IPS LCD",
+        "Unisoc T606",
+        "50MP dual camera",
+        "5000mAh battery",
+        "Android 12",
+        "Face unlock"
+      ],
+      "in_stock": true,
+      "quantity": 12
+    },
+    {
+      "id": 9,
+      "name": "Google Pixel 7",
+      "brand": "Google",
+      "model": "GVU6C",
+      "price": 2100000,
+      "price_formatted": "UGX 2,100,000",
+      "condition": "New",
+      "storage": "128GB",
+      "ram": "8GB",
+      "color": "Snow",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel7.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/google-pixel7.jpg"
+      ],
+      "description": "Pure Android experience with amazing camera software.",
+      "features": [
+        "6.3-inch OLED 90Hz",
+        "Google Tensor G2",
+        "50MP dual camera",
+        "Magic Eraser feature",
+        "IP68 water resistant",
+        "Android 13"
+      ],
+      "in_stock": true,
+      "quantity": 3
+    },
+    {
+      "id": 10,
+      "name": "Nokia G22",
+      "brand": "Nokia",
+      "model": "TA-1526",
+      "price": 450000,
+      "price_formatted": "UGX 450,000",
+      "condition": "New",
+      "storage": "64GB",
+      "ram": "4GB",
+      "color": "Meteor Grey",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/nokia-g22.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/nokia-g22.jpg"
+      ],
+      "description": "Durable phone with eco-friendly materials and easy repair.",
+      "features": [
+        "6.5-inch HD+ display",
+        "Unisoc T606",
+        "50MP triple camera",
+        "5050mAh battery",
+        "Stock Android",
+        "2-day battery life"
+      ],
+      "in_stock": true,
+      "quantity": 8
+    }
+  ]
+}
