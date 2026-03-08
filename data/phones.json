@@ -1,35 +1,7 @@
 {
   "phones": [
-    // ===== iPhones =====
     {
       "id": 1,
-      "name": "iPhone 15 Pro Max",
-      "brand": "Apple",
-      "model": "A2849",
-      "price": 5500000,
-      "price_formatted": "UGX 5,500,000",
-      "condition": "New",
-      "storage": "256GB",
-      "ram": "8GB",
-      "color": "Natural Titanium",
-      "battery_health": "100%",
-      "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=iPhone+15+Pro+Max",
-      "images": [],
-      "description": "Latest iPhone with titanium design, A17 Pro chip, and USB-C.",
-      "features": [
-        "6.7-inch Super Retina XDR display",
-        "A17 Pro chip",
-        "48MP Main + Telephoto + Ultra Wide",
-        "USB-C connector",
-        "Action button",
-        "iOS 17"
-      ],
-      "in_stock": true,
-      "quantity": 3
-    },
-    {
-      "id": 2,
       "name": "iPhone 14 Pro Max",
       "brand": "Apple",
       "model": "A2896",
@@ -41,9 +13,12 @@
       "color": "Deep Purple",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=iPhone+14+Pro+Max",
-      "images": [],
-      "description": "Brand new iPhone 14 Pro Max with Dynamic Island and A16 Bionic.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-2.jpg"
+      ],
+      "description": "Brand new iPhone 14 Pro Max with Dynamic Island, A16 Bionic chip, and 48MP camera.",
       "features": [
         "6.7-inch Super Retina XDR display",
         "A16 Bionic chip",
@@ -56,59 +31,36 @@
       "quantity": 5
     },
     {
-      "id": 3,
-      "name": "iPhone 13 Pro Max",
+      "id": 2,
+      "name": "iPhone 13",
       "brand": "Apple",
-      "model": "MLKW3LL/A",
-      "price": 3500000,
-      "price_formatted": "UGX 3,500,000",
-      "condition": "Refurbished",
-      "storage": "256GB",
-      "ram": "6GB",
-      "color": "Graphite",
-      "battery_health": "95%",
-      "warranty": "6 months",
-      "image_url": "https://via.placeholder.com/300x400?text=iPhone+13+Pro+Max",
-      "images": [],
-      "description": "Professionally refurbished iPhone 13 Pro Max in excellent condition.",
-      "features": [
-        "6.7-inch Super Retina XDR with ProMotion",
-        "A15 Bionic chip",
-        "Pro camera system",
-        "5G capable",
-        "New battery installed"
-      ],
-      "in_stock": true,
-      "quantity": 4
-    },
-    {
-      "id": 4,
-      "name": "iPhone 13 Pro",
-      "brand": "Apple",
-      "model": "MLVQ3LL/A",
+      "model": "A2633",
       "price": 2800000,
       "price_formatted": "UGX 2,800,000",
-      "condition": "Refurbished",
-      "storage": "256GB",
-      "ram": "6GB",
-      "color": "Sierra Blue",
-      "battery_health": "92%",
-      "warranty": "6 months",
-      "image_url": "https://via.placeholder.com/300x400?text=iPhone+13+Pro",
-      "images": [],
-      "description": "Professionally refurbished iPhone 13 Pro in excellent condition.",
+      "condition": "New",
+      "storage": "128GB",
+      "ram": "4GB",
+      "color": "Midnight",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg"
+      ],
+      "description": "Latest iPhone with powerful A15 chip and great battery life.",
       "features": [
-        "6.1-inch Super Retina XDR with ProMotion",
-        "A15 Bionic chip",
-        "Pro camera system",
+        "6.1-inch Super Retina XDR",
+        "A15 Bionic",
+        "Dual 12MP cameras",
         "5G capable",
-        "New battery installed"
+        "Face ID",
+        "iOS 15"
       ],
       "in_stock": true,
-      "quantity": 2
+      "quantity": 8
     },
     {
-      "id": 5,
+      "id": 3,
       "name": "iPhone 12",
       "brand": "Apple",
       "model": "A2403",
@@ -120,8 +72,10 @@
       "color": "Product Red",
       "battery_health": "88%",
       "warranty": "3 months",
-      "image_url": "https://via.placeholder.com/300x400?text=iPhone+12",
-      "images": [],
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg"
+      ],
       "description": "Refurbished iPhone 12 with new screen and battery.",
       "features": [
         "6.1-inch Super Retina XDR",
@@ -135,35 +89,7 @@
       "quantity": 4
     },
     {
-      "id": 6,
-      "name": "iPhone 11",
-      "brand": "Apple",
-      "model": "A2221",
-      "price": 1200000,
-      "price_formatted": "UGX 1,200,000",
-      "condition": "Refurbished",
-      "storage": "64GB",
-      "ram": "4GB",
-      "color": "Black",
-      "battery_health": "85%",
-      "warranty": "3 months",
-      "image_url": "https://via.placeholder.com/300x400?text=iPhone+11",
-      "images": [],
-      "description": "Reliable iPhone 11, refurbished and ready to use.",
-      "features": [
-        "6.1-inch Liquid Retina HD",
-        "A13 Bionic",
-        "Dual 12MP cameras",
-        "Face ID",
-        "Water resistant"
-      ],
-      "in_stock": true,
-      "quantity": 6
-    },
-    
-    // ===== Samsung =====
-    {
-      "id": 7,
+      "id": 4,
       "name": "Samsung Galaxy S23 Ultra",
       "brand": "Samsung",
       "model": "SM-S918B",
@@ -175,8 +101,11 @@
       "color": "Phantom Black",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Samsung+S23+Ultra",
-      "images": [],
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-5g.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-5g.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-.jpg"
+      ],
       "description": "The ultimate Android phone with built-in S Pen and 200MP camera.",
       "features": [
         "6.8-inch Dynamic AMOLED 2X display",
@@ -190,34 +119,37 @@
       "quantity": 3
     },
     {
-      "id": 8,
-      "name": "Samsung Galaxy S23 Plus",
+      "id": 5,
+      "name": "Samsung Galaxy S22",
       "brand": "Samsung",
-      "model": "SM-S916B",
-      "price": 3200000,
-      "price_formatted": "UGX 3,200,000",
+      "model": "SM-S901B",
+      "price": 2800000,
+      "price_formatted": "UGX 2,800,000",
       "condition": "New",
-      "storage": "256GB",
+      "storage": "128GB",
       "ram": "8GB",
-      "color": "Green",
+      "color": "Phantom Black",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Samsung+S23+Plus",
-      "images": [],
-      "description": "Flagship experience in a slightly smaller package.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg"
+      ],
+      "description": "Compact flagship with amazing camera and performance.",
       "features": [
-        "6.6-inch Dynamic AMOLED 2X",
-        "Snapdragon 8 Gen 2",
+        "6.1-inch Dynamic AMOLED 2X",
+        "Snapdragon 8 Gen 1",
         "50MP triple camera",
-        "4700mAh battery",
-        "45W fast charging"
+        "3700mAh battery",
+        "IP68 water resistant",
+        "25W fast charging"
       ],
       "in_stock": true,
-      "quantity": 4
+      "quantity": 6
     },
     {
-      "id": 9,
-      "name": "Samsung Galaxy A54 5G",
+      "id": 6,
+      "name": "Samsung A54 5G",
       "brand": "Samsung",
       "model": "SM-A546E",
       "price": 950000,
@@ -228,8 +160,10 @@
       "color": "Awesome Lime",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Samsung+A54",
-      "images": [],
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a54-5g.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a54-5g.jpg"
+      ],
       "description": "Best mid-range Samsung with 5G and great display.",
       "features": [
         "6.4-inch Super AMOLED 120Hz",
@@ -243,61 +177,65 @@
       "quantity": 7
     },
     {
-      "id": 10,
-      "name": "Samsung Galaxy A34 5G",
+      "id": 7,
+      "name": "Samsung A34 5G",
       "brand": "Samsung",
       "model": "SM-A346E",
-      "price": 750000,
-      "price_formatted": "UGX 750,000",
+      "price": 800000,
+      "price_formatted": "UGX 800,000",
       "condition": "New",
       "storage": "128GB",
       "ram": "6GB",
       "color": "Awesome Silver",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Samsung+A34",
-      "images": [],
-      "description": "Solid mid-range phone with great battery life.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a34-5g.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a34-5g.jpg"
+      ],
+      "description": "Popular mid-range phone with great value for money.",
       "features": [
-        "6.6-inch Super AMOLED 120Hz",
+        "6.6-inch Super AMOLED 90Hz",
         "MediaTek Dimensity 1080",
         "48MP triple camera",
         "5000mAh battery",
-        "25W fast charging"
+        "25W fast charging",
+        "IP67 water resistant"
       ],
       "in_stock": true,
-      "quantity": 8
+      "quantity": 10
     },
     {
-      "id": 11,
-      "name": "Samsung Galaxy A14",
+      "id": 8,
+      "name": "Samsung A14",
       "brand": "Samsung",
       "model": "SM-A145F",
-      "price": 450000,
-      "price_formatted": "UGX 450,000",
+      "price": 550000,
+      "price_formatted": "UGX 550,000",
       "condition": "New",
       "storage": "64GB",
       "ram": "4GB",
       "color": "Black",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Samsung+A14",
-      "images": [],
-      "description": "Affordable Samsung phone for everyday use.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a14-4g.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a14-4g.jpg"
+      ],
+      "description": "Affordable Samsung with big battery and good performance.",
       "features": [
         "6.6-inch PLS LCD",
         "MediaTek Helio G80",
         "50MP triple camera",
         "5000mAh battery",
-        "15W charging"
+        "15W charging",
+        "Android 13"
       ],
       "in_stock": true,
-      "quantity": 12
+      "quantity": 15
     },
-    
-    // ===== Tecno (Very Popular in Uganda) =====
     {
-      "id": 12,
+      "id": 9,
       "name": "Tecno Camon 20 Pro",
       "brand": "Tecno",
       "model": "CK8n",
@@ -309,8 +247,10 @@
       "color": "Dark Welkin",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Tecno+Camon+20+Pro",
-      "images": [],
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/tecno-camon-20-pro.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/tecno-camon-20-pro.jpg"
+      ],
       "description": "Mid-range champion with great cameras and fast charging.",
       "features": [
         "6.67-inch AMOLED display",
@@ -324,140 +264,123 @@
       "quantity": 10
     },
     {
-      "id": 13,
+      "id": 10,
       "name": "Tecno Camon 20",
       "brand": "Tecno",
       "model": "CK6n",
-      "price": 650000,
-      "price_formatted": "UGX 650,000",
+      "price": 700000,
+      "price_formatted": "UGX 700,000",
       "condition": "New",
       "storage": "128GB",
       "ram": "8GB",
       "color": "Serenity Blue",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Tecno+Camon+20",
-      "images": [],
-      "description": "Excellent camera phone at an affordable price.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/tecno-camon-20.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/tecno-camon-20.jpg"
+      ],
+      "description": "Popular camera phone with great features.",
       "features": [
         "6.67-inch AMOLED",
-        "MediaTek G85",
-        "64MP main camera",
+        "MediaTek Helio G85",
+        "64MP camera",
         "5000mAh battery",
-        "33W charging"
+        "33W charging",
+        "Android 13"
       ],
       "in_stock": true,
       "quantity": 12
     },
     {
-      "id": 14,
+      "id": 11,
       "name": "Tecno Spark 10 Pro",
       "brand": "Tecno",
-      "model": "KJ7",
-      "price": 480000,
-      "price_formatted": "UGX 480,000",
+      "model": "KJ6",
+      "price": 520000,
+      "price_formatted": "UGX 520,000",
       "condition": "New",
       "storage": "128GB",
       "ram": "8GB",
       "color": "Starry Black",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Tecno+Spark+10+Pro",
-      "images": [],
-      "description": "Best-selling budget phone with great features.",
-      "features": [
-        "6.8-inch FHD+ display",
-        "MediaTek G88",
-        "50MP main camera",
-        "5000mAh battery",
-        "18W charging"
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/tecno-spark-10-pro.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/tecno-spark-10-pro.jpg"
       ],
-      "in_stock": true,
-      "quantity": 15
-    },
-    {
-      "id": 15,
-      "name": "Tecno Spark 10",
-      "brand": "Tecno",
-      "model": "KI5",
-      "price": 380000,
-      "price_formatted": "UGX 380,000",
-      "condition": "New",
-      "storage": "64GB",
-      "ram": "4GB",
-      "color": "Pearl White",
-      "battery_health": "100%",
-      "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Tecno+Spark+10",
-      "images": [],
-      "description": "Entry-level phone perfect for first-time smartphone users.",
+      "description": "Best-selling budget phone with huge RAM.",
       "features": [
-        "6.6-inch HD+ display",
-        "Unisoc T606",
-        "16MP main camera",
+        "6.8-inch IPS LCD",
+        "MediaTek Helio G88",
+        "50MP camera",
         "5000mAh battery",
+        "18W charging",
         "Android 13"
       ],
       "in_stock": true,
       "quantity": 20
     },
     {
-      "id": 16,
+      "id": 12,
+      "name": "Tecno Spark 10",
+      "brand": "Tecno",
+      "model": "KJ5",
+      "price": 450000,
+      "price_formatted": "UGX 450,000",
+      "condition": "New",
+      "storage": "64GB",
+      "ram": "4GB",
+      "color": "Meadow Green",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/tecno-spark-10.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/tecno-spark-10.jpg"
+      ],
+      "description": "Affordable everyday phone with good battery.",
+      "features": [
+        "6.6-inch IPS LCD",
+        "Unisoc T606",
+        "16MP camera",
+        "5000mAh battery",
+        "10W charging",
+        "Android 13"
+      ],
+      "in_stock": true,
+      "quantity": 25
+    },
+    {
+      "id": 13,
       "name": "Tecno Pop 7",
       "brand": "Tecno",
       "model": "BD4",
-      "price": 250000,
-      "price_formatted": "UGX 250,000",
+      "price": 320000,
+      "price_formatted": "UGX 320,000",
       "condition": "New",
       "storage": "32GB",
       "ram": "2GB",
-      "color": "Endless Black",
-      "battery_health": "100%",
-      "warranty": "6 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Tecno+Pop+7",
-      "images": [],
-      "description": "Ultra-budget phone for basic needs.",
-      "features": [
-        "6.0-inch display",
-        "Quad-core processor",
-        "5MP camera",
-        "3000mAh battery",
-        "Android Go"
-      ],
-      "in_stock": true,
-      "quantity": 15
-    },
-    
-    // ===== Infinix =====
-    {
-      "id": 17,
-      "name": "Infinix Note 30 Pro",
-      "brand": "Infinix",
-      "model": "X678B",
-      "price": 650000,
-      "price_formatted": "UGX 650,000",
-      "condition": "New",
-      "storage": "256GB",
-      "ram": "8GB",
-      "color": "Magic Black",
+      "color": "Capri Blue",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Infinix+Note+30+Pro",
-      "images": [],
-      "description": "Premium mid-range with JBL speakers and fast charging.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/tecno-pop-7.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/tecno-pop-7.jpg"
+      ],
+      "description": "Entry-level smartphone for basic needs.",
       "features": [
-        "6.78-inch FHD+ AMOLED",
-        "MediaTek Helio G99",
-        "108MP main camera",
-        "68W fast charging",
+        "6.5-inch IPS LCD",
+        "Unisoc SC9863A",
+        "8MP camera",
         "5000mAh battery",
-        "JBL stereo speakers"
+        "Android 12 Go",
+        "Face unlock"
       ],
       "in_stock": true,
-      "quantity": 8
+      "quantity": 30
     },
     {
-      "id": 18,
+      "id": 14,
       "name": "Infinix Note 30",
       "brand": "Infinix",
       "model": "X6835B",
@@ -469,8 +392,10 @@
       "color": "Magic Black",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Infinix+Note+30",
-      "images": [],
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-30.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-30.jpg"
+      ],
       "description": "Budget king with huge battery and stereo speakers.",
       "features": [
         "6.78-inch FHD+ display",
@@ -484,61 +409,94 @@
       "quantity": 15
     },
     {
-      "id": 19,
+      "id": 15,
+      "name": "Infinix Note 30 Pro",
+      "brand": "Infinix",
+      "model": "X678B",
+      "price": 680000,
+      "price_formatted": "UGX 680,000",
+      "condition": "New",
+      "storage": "256GB",
+      "ram": "8GB",
+      "color": "Variable Gold",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-30-pro.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-30-pro.jpg"
+      ],
+      "description": "Premium budget phone with amazing features.",
+      "features": [
+        "6.67-inch AMOLED 120Hz",
+        "MediaTek Helio G99",
+        "108MP camera",
+        "68W fast charging",
+        "5000mAh battery",
+        "JBL speakers"
+      ],
+      "in_stock": true,
+      "quantity": 8
+    },
+    {
+      "id": 16,
       "name": "Infinix Hot 30",
       "brand": "Infinix",
       "model": "X6831",
-      "price": 420000,
-      "price_formatted": "UGX 420,000",
+      "price": 480000,
+      "price_formatted": "UGX 480,000",
       "condition": "New",
       "storage": "128GB",
       "ram": "8GB",
-      "color": "Racing Black",
+      "color": "Sonic Black",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Infinix+Hot+30",
-      "images": [],
-      "description": "Popular gaming phone with 90Hz display.",
-      "features": [
-        "6.78-inch FHD+ 90Hz",
-        "MediaTek Helio G88",
-        "50MP dual camera",
-        "5000mAh battery",
-        "33W fast charging"
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-30.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-30.jpg"
       ],
-      "in_stock": true,
-      "quantity": 12
-    },
-    {
-      "id": 20,
-      "name": "Infinix Smart 7",
-      "brand": "Infinix",
-      "model": "X6515",
-      "price": 320000,
-      "price_formatted": "UGX 320,000",
-      "condition": "New",
-      "storage": "64GB",
-      "ram": "3GB",
-      "color": "Azure Blue",
-      "battery_health": "100%",
-      "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Infinix+Smart+7",
-      "images": [],
-      "description": "Affordable entry-level smartphone.",
+      "description": "Popular gaming phone in budget segment.",
       "features": [
-        "6.6-inch HD+ display",
-        "Unisoc SC9863A",
-        "8MP camera",
+        "6.78-inch IPS 90Hz",
+        "MediaTek Helio G88",
+        "50MP camera",
         "5000mAh battery",
-        "Android 12 Go"
+        "33W charging",
+        "XOS 13"
       ],
       "in_stock": true,
       "quantity": 18
     },
-    
-    // ===== Itel =====
     {
-      "id": 21,
+      "id": 17,
+      "name": "Infinix Smart 7",
+      "brand": "Infinix",
+      "model": "X6515",
+      "price": 380000,
+      "price_formatted": "UGX 380,000",
+      "condition": "New",
+      "storage": "64GB",
+      "ram": "4GB",
+      "color": "Azure Blue",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-7.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-7.jpg"
+      ],
+      "description": "Entry-level phone with big battery.",
+      "features": [
+        "6.6-inch IPS LCD",
+        "Unisoc SC9863A",
+        "13MP camera",
+        "5000mAh battery",
+        "Android 12 Go",
+        "Face unlock"
+      ],
+      "in_stock": true,
+      "quantity": 22
+    },
+    {
+      "id": 18,
       "name": "Itel S23",
       "brand": "Itel",
       "model": "S665L",
@@ -550,9 +508,11 @@
       "color": "Neon Cyan",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Itel+S23",
-      "images": [],
-      "description": "Stylish budget phone with good specs.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/itel-s23.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/itel-s23.jpg"
+      ],
+      "description": "Affordable smartphone with good specs for daily use.",
       "features": [
         "6.6-inch IPS LCD",
         "Unisoc T606",
@@ -565,252 +525,297 @@
       "quantity": 12
     },
     {
-      "id": 22,
+      "id": 19,
       "name": "Itel A60",
       "brand": "Itel",
-      "model": "A60",
+      "model": "A662L",
       "price": 280000,
       "price_formatted": "UGX 280,000",
       "condition": "New",
       "storage": "32GB",
       "ram": "2GB",
+      "color": "Wave Blue",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/itel-a60.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/itel-a60.jpg"
+      ],
+      "description": "Best-selling budget phone in Uganda.",
+      "features": [
+        "6.6-inch IPS LCD",
+        "Unisoc SC9832E",
+        "8MP camera",
+        "5000mAh battery",
+        "Android 11 Go",
+        "Fingerprint sensor"
+      ],
+      "in_stock": true,
+      "quantity": 35
+    },
+    {
+      "id": 20,
+      "name": "Itel A05",
+      "brand": "Itel",
+      "model": "A602L",
+      "price": 220000,
+      "price_formatted": "UGX 220,000",
+      "condition": "New",
+      "storage": "16GB",
+      "ram": "1GB",
       "color": "Sky Blue",
       "battery_health": "100%",
-      "warranty": "6 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Itel+A60",
-      "images": [],
-      "description": "Basic smartphone for essential tasks.",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/itel-a05.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/itel-a05.jpg"
+      ],
+      "description": "Ultra-budget phone for basic communication.",
       "features": [
-        "6.3-inch display",
-        "Quad-core processor",
+        "6.1-inch IPS LCD",
+        "Unisoc SC7731E",
         "5MP camera",
-        "4000mAh battery",
-        "Android Go"
-      ],
-      "in_stock": true,
-      "quantity": 15
-    },
-    {
-      "id": 23,
-      "name": "Itel P40",
-      "brand": "Itel",
-      "model": "P40",
-      "price": 320000,
-      "price_formatted": "UGX 320,000",
-      "condition": "New",
-      "storage": "64GB",
-      "ram": "4GB",
-      "color": "Imperial Green",
-      "battery_health": "100%",
-      "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Itel+P40",
-      "images": [],
-      "description": "Long battery life phone for heavy users.",
-      "features": [
-        "6.6-inch HD+ display",
-        "Unisoc SC9863A",
-        "13MP dual camera",
-        "6000mAh battery",
-        "Android 11"
-      ],
-      "in_stock": true,
-      "quantity": 10
-    },
-    
-    // ===== Huawei =====
-    {
-      "id": 24,
-      "name": "Huawei Nova 11",
-      "brand": "Huawei",
-      "model": "Nova 11",
-      "price": 1200000,
-      "price_formatted": "UGX 1,200,000",
-      "condition": "New",
-      "storage": "256GB",
-      "ram": "8GB",
-      "color": "Black",
-      "battery_health": "100%",
-      "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Huawei+Nova+11",
-      "images": [],
-      "description": "Sleek design with excellent cameras.",
-      "features": [
-        "6.7-inch OLED 120Hz",
-        "Snapdragon 778G",
-        "50MP dual camera",
-        "66W fast charging",
-        "HarmonyOS",
+        "3020mAh battery",
+        "Android 10 Go",
         "Dual SIM"
       ],
       "in_stock": true,
-      "quantity": 5
+      "quantity": 40
     },
     {
-      "id": 25,
-      "name": "Huawei Y9a",
+      "id": 21,
+      "name": "Huawei Nova Y90",
       "brand": "Huawei",
-      "model": "Y9a",
+      "model": "CTR-LX1",
       "price": 750000,
       "price_formatted": "UGX 750,000",
-      "condition": "Refurbished",
-      "storage": "128GB",
-      "ram": "8GB",
-      "color": "Space Silver",
-      "battery_health": "90%",
-      "warranty": "6 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Huawei+Y9a",
-      "images": [],
-      "description": "Popular mid-range Huawei phone.",
-      "features": [
-        "6.63-inch FHD+",
-        "MediaTek Dimensity 800U",
-        "64MP quad camera",
-        "4200mAh battery",
-        "40W fast charging"
-      ],
-      "in_stock": true,
-      "quantity": 4
-    },
-    
-    // ===== Xiaomi =====
-    {
-      "id": 26,
-      "name": "Xiaomi Redmi Note 12 Pro",
-      "brand": "Xiaomi",
-      "model": "Note 12 Pro",
-      "price": 950000,
-      "price_formatted": "UGX 950,000",
       "condition": "New",
       "storage": "128GB",
-      "ram": "8GB",
-      "color": "Onyx Gray",
+      "ram": "6GB",
+      "color": "Crystal Blue",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Redmi+Note+12+Pro",
-      "images": [],
-      "description": "Feature-packed mid-range phone.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-y90.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-y90.jpg"
+      ],
+      "description": "Huawei mid-range with great battery and display.",
       "features": [
-        "6.67-inch AMOLED 120Hz",
-        "MediaTek Dimensity 1080",
-        "108MP main camera",
-        "67W fast charging",
-        "5000mAh battery"
+        "6.7-inch IPS LCD",
+        "Snapdragon 680",
+        "50MP triple camera",
+        "5000mAh battery",
+        "40W fast charging",
+        "EMUI 12"
       ],
       "in_stock": true,
       "quantity": 6
     },
     {
-      "id": 27,
-      "name": "Xiaomi Redmi 12",
-      "brand": "Xiaomi",
-      "model": "Redmi 12",
-      "price": 520000,
-      "price_formatted": "UGX 520,000",
+      "id": 22,
+      "name": "Huawei Y9a",
+      "brand": "Huawei",
+      "model": "FRL-L22",
+      "price": 850000,
+      "price_formatted": "UGX 850,000",
       "condition": "New",
       "storage": "128GB",
-      "ram": "6GB",
-      "color": "Midnight Black",
-      "battery_health": "100%",
-      "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Redmi+12",
-      "images": [],
-      "description": "Great value budget phone.",
-      "features": [
-        "6.79-inch FHD+ 90Hz",
-        "MediaTek Helio G88",
-        "50MP triple camera",
-        "5000mAh battery",
-        "18W charging"
-      ],
-      "in_stock": true,
-      "quantity": 10
-    },
-    
-    // ===== Oppo =====
-    {
-      "id": 28,
-      "name": "Oppo Reno 10",
-      "brand": "Oppo",
-      "model": "Reno 10",
-      "price": 1350000,
-      "price_formatted": "UGX 1,350,000",
-      "condition": "New",
-      "storage": "256GB",
       "ram": "8GB",
-      "color": "Silvery Grey",
+      "color": "Space Silver",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Oppo+Reno+10",
-      "images": [],
-      "description": "Style and performance combined.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/huawei-y9a.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/huawei-y9a.jpg"
+      ],
+      "description": "Popular Huawei with pop-up camera.",
       "features": [
-        "6.7-inch AMOLED 120Hz",
-        "Snapdragon 778G",
-        "64MP triple camera",
-        "80W fast charging",
-        "5000mAh battery"
+        "6.63-inch IPS LCD",
+        "MediaTek Helio G80",
+        "48MP quad camera",
+        "4200mAh battery",
+        "40W fast charging",
+        "Pop-up selfie camera"
       ],
       "in_stock": true,
       "quantity": 4
     },
     {
-      "id": 29,
-      "name": "Oppo A78",
+      "id": 23,
+      "name": "Oppo Reno 8",
       "brand": "Oppo",
-      "model": "A78",
-      "price": 680000,
-      "price_formatted": "UGX 680,000",
+      "model": "CPH2359",
+      "price": 1100000,
+      "price_formatted": "UGX 1,100,000",
       "condition": "New",
       "storage": "128GB",
       "ram": "8GB",
-      "color": "Glowing Black",
+      "color": "Shimmer Gold",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Oppo+A78",
-      "images": [],
-      "description": "Reliable mid-range phone.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8.jpg"
+      ],
+      "description": "Stylish phone with amazing selfie camera.",
       "features": [
-        "6.56-inch HD+ 90Hz",
-        "Snapdragon 680",
-        "50MP dual camera",
+        "6.4-inch AMOLED 90Hz",
+        "MediaTek Dimensity 1300",
+        "50MP triple camera",
+        "32MP selfie camera",
+        "4500mAh battery",
+        "80W fast charging"
+      ],
+      "in_stock": true,
+      "quantity": 5
+    },
+    {
+      "id": 24,
+      "name": "Oppo A77",
+      "brand": "Oppo",
+      "model": "CPH2385",
+      "price": 750000,
+      "price_formatted": "UGX 750,000",
+      "condition": "New",
+      "storage": "64GB",
+      "ram": "4GB",
+      "color": "Ocean Blue",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a77.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/oppo-a77.jpg"
+      ],
+      "description": "Reliable mid-range phone with good battery.",
+      "features": [
+        "6.56-inch IPS 90Hz",
+        "MediaTek Helio G35",
+        "48MP dual camera",
         "5000mAh battery",
-        "33W fast charging"
+        "33W charging",
+        "ColorOS 12"
       ],
       "in_stock": true,
       "quantity": 8
     },
-    
-    // ===== Vivo =====
     {
-      "id": 30,
-      "name": "Vivo Y36",
+      "id": 25,
+      "name": "Vivo Y22",
       "brand": "Vivo",
-      "model": "Y36",
-      "price": 620000,
-      "price_formatted": "UGX 620,000",
+      "model": "V2206",
+      "price": 650000,
+      "price_formatted": "UGX 650,000",
       "condition": "New",
-      "storage": "128GB",
-      "ram": "8GB",
-      "color": "Meteor Black",
+      "storage": "64GB",
+      "ram": "4GB",
+      "color": "Starlit Blue",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Vivo+Y36",
-      "images": [],
-      "description": "Sleek design with great battery life.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/vivo-y22.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/vivo-y22.jpg"
+      ],
+      "description": "Stylish budget phone with big battery.",
       "features": [
-        "6.6-inch FHD+ 90Hz",
-        "Snapdragon 680",
+        "6.55-inch IPS LCD",
+        "MediaTek Helio G85",
         "50MP dual camera",
         "5000mAh battery",
-        "44W fast charging"
+        "18W charging",
+        "Funtouch OS 12"
+      ],
+      "in_stock": true,
+      "quantity": 9
+    },
+    {
+      "id": 26,
+      "name": "Xiaomi Redmi Note 12",
+      "brand": "Xiaomi",
+      "model": "23021RAA2Y",
+      "price": 780000,
+      "price_formatted": "UGX 780,000",
+      "condition": "New",
+      "storage": "128GB",
+      "ram": "6GB",
+      "color": "Onyx Gray",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-12.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-12.jpg"
+      ],
+      "description": "Feature-packed phone with AMOLED display.",
+      "features": [
+        "6.67-inch AMOLED 120Hz",
+        "Snapdragon 685",
+        "48MP triple camera",
+        "5000mAh battery",
+        "33W fast charging",
+        "MIUI 14"
       ],
       "in_stock": true,
       "quantity": 7
     },
-    
-    // ===== Nokia =====
     {
-      "id": 31,
+      "id": 27,
+      "name": "Xiaomi Redmi 12C",
+      "brand": "Xiaomi",
+      "model": "22120RN86G",
+      "price": 550000,
+      "price_formatted": "UGX 550,000",
+      "condition": "New",
+      "storage": "64GB",
+      "ram": "4GB",
+      "color": "Graphite Gray",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-12c.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-12c.jpg"
+      ],
+      "description": "Best value budget phone with big battery.",
+      "features": [
+        "6.71-inch IPS LCD",
+        "MediaTek Helio G85",
+        "50MP dual camera",
+        "5000mAh battery",
+        "10W charging",
+        "MIUI 13"
+      ],
+      "in_stock": true,
+      "quantity": 12
+    },
+    {
+      "id": 28,
+      "name": "Google Pixel 7",
+      "brand": "Google",
+      "model": "GVU6C",
+      "price": 2100000,
+      "price_formatted": "UGX 2,100,000",
+      "condition": "New",
+      "storage": "128GB",
+      "ram": "8GB",
+      "color": "Snow",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel7.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/google-pixel7.jpg"
+      ],
+      "description": "Pure Android experience with amazing camera software.",
+      "features": [
+        "6.3-inch OLED 90Hz",
+        "Google Tensor G2",
+        "50MP dual camera",
+        "Magic Eraser feature",
+        "IP68 water resistant",
+        "Android 13"
+      ],
+      "in_stock": true,
+      "quantity": 3
+    },
+    {
+      "id": 29,
       "name": "Nokia G22",
       "brand": "Nokia",
       "model": "TA-1526",
@@ -822,8 +827,10 @@
       "color": "Meteor Grey",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Nokia+G22",
-      "images": [],
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/nokia-g22.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/nokia-g22.jpg"
+      ],
       "description": "Durable phone with eco-friendly materials and easy repair.",
       "features": [
         "6.5-inch HD+ display",
@@ -837,113 +844,178 @@
       "quantity": 8
     },
     {
-      "id": 32,
-      "name": "Nokia C32",
+      "id": 30,
+      "name": "Nokia C21",
       "brand": "Nokia",
-      "model": "C32",
-      "price": 380000,
-      "price_formatted": "UGX 380,000",
+      "model": "TA-1417",
+      "price": 350000,
+      "price_formatted": "UGX 350,000",
       "condition": "New",
-      "storage": "64GB",
-      "ram": "4GB",
-      "color": "Charcoal",
+      "storage": "32GB",
+      "ram": "2GB",
+      "color": "Dark Blue",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Nokia+C32",
-      "images": [],
-      "description": "Reliable Nokia quality at an affordable price.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/nokia-c21.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/nokia-c21.jpg"
+      ],
+      "description": "Reliable Nokia with clean Android.",
       "features": [
-        "6.5-inch HD+",
+        "6.5-inch IPS LCD",
         "Unisoc SC9863A",
-        "13MP dual camera",
-        "5000mAh battery",
-        "Android 12"
+        "8MP camera",
+        "3000mAh battery",
+        "Android 11 Go",
+        "Durable build"
       ],
       "in_stock": true,
       "quantity": 10
     },
-    
-    // ===== Google Pixel =====
     {
-      "id": 33,
-      "name": "Google Pixel 7",
-      "brand": "Google",
-      "model": "GVU6C",
-      "price": 2100000,
-      "price_formatted": "UGX 2,100,000",
+      "id": 31,
+      "name": "Realme 10",
+      "brand": "Realme",
+      "model": "RMX3630",
+      "price": 680000,
+      "price_formatted": "UGX 680,000",
       "condition": "New",
       "storage": "128GB",
       "ram": "8GB",
-      "color": "Snow",
+      "color": "Rush Black",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Google+Pixel+7",
-      "images": [],
-      "description": "Pure Android experience with amazing camera software.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/realme-10.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/realme-10.jpg"
+      ],
+      "description": "Sleek design with great performance.",
       "features": [
-        "6.3-inch OLED 90Hz",
-        "Google Tensor G2",
+        "6.4-inch Super AMOLED 90Hz",
+        "MediaTek Helio G99",
         "50MP dual camera",
-        "Magic Eraser feature",
-        "IP68 water resistant",
-        "Android 13"
+        "5000mAh battery",
+        "33W fast charging",
+        "Realme UI 4"
       ],
       "in_stock": true,
-      "quantity": 3
+      "quantity": 6
     },
-    
-    // ===== Realme =====
     {
-      "id": 34,
-      "name": "Realme 11 Pro",
+      "id": 32,
+      "name": "Realme C55",
       "brand": "Realme",
-      "model": "11 Pro",
-      "price": 980000,
-      "price_formatted": "UGX 980,000",
+      "model": "RMX3710",
+      "price": 580000,
+      "price_formatted": "UGX 580,000",
       "condition": "New",
-      "storage": "256GB",
-      "ram": "8GB",
-      "color": "Sunrise Beige",
+      "storage": "128GB",
+      "ram": "6GB",
+      "color": "Sunshower",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Realme+11+Pro",
-      "images": [],
-      "description": "Premium design with curved display.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/realme-c55.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/realme-c55.jpg"
+      ],
+      "description": "Best-selling budget phone with Mini Capsule feature.",
       "features": [
-        "6.7-inch AMOLED 120Hz",
-        "MediaTek Dimensity 7050",
-        "100MP main camera",
-        "67W fast charging",
-        "5000mAh battery"
+        "6.72-inch IPS 90Hz",
+        "MediaTek Helio G88",
+        "64MP dual camera",
+        "5000mAh battery",
+        "33W charging",
+        "Dynamic Island-like feature"
+      ],
+      "in_stock": true,
+      "quantity": 12
+    },
+    {
+      "id": 33,
+      "name": "Mara Phone X",
+      "brand": "Mara Phone",
+      "model": "Mara X",
+      "price": 1250000,
+      "price_formatted": "UGX 1,250,000",
+      "condition": "New",
+      "storage": "32GB",
+      "ram": "3GB",
+      "color": "Midnight Black",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/mara-phone.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/mara-phone.jpg"
+      ],
+      "description": "Africa's first smartphone - proudly made in Rwanda.",
+      "features": [
+        "5.5-inch HD display",
+        "MediaTek processor",
+        "13MP camera",
+        "3075mAh battery",
+        "Made in Africa",
+        "Gorilla Glass"
       ],
       "in_stock": true,
       "quantity": 5
     },
     {
-      "id": 35,
-      "name": "Realme C55",
-      "brand": "Realme",
-      "model": "C55",
-      "price": 520000,
-      "price_formatted": "UGX 520,000",
+      "id": 34,
+      "name": "Mara Phone Z",
+      "brand": "Mara Phone",
+      "model": "Mara Z",
+      "price": 1750000,
+      "price_formatted": "UGX 1,750,000",
       "condition": "New",
-      "storage": "128GB",
-      "ram": "6GB",
-      "color": "Sun Shower",
+      "storage": "64GB",
+      "ram": "4GB",
+      "color": "Gold",
       "battery_health": "100%",
       "warranty": "12 months",
-      "image_url": "https://via.placeholder.com/300x400?text=Realme+C55",
-      "images": [],
-      "description": "Best budget phone with mini capsule feature.",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/mara-phone-z.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/mara-phone-z.jpg"
+      ],
+      "description": "Premium African-made smartphone with flagship features.",
       "features": [
-        "6.72-inch FHD+ 90Hz",
-        "MediaTek Helio G88",
-        "64MP dual camera",
-        "33W fast charging",
-        "5000mAh battery"
+        "5.7-inch HD+ display",
+        "Qualcomm Snapdragon",
+        "16MP camera",
+        "3200mAh battery",
+        "Made in Africa",
+        "Fingerprint sensor"
       ],
       "in_stock": true,
-      "quantity": 9
+      "quantity": 3
+    },
+    {
+      "id": 35,
+      "name": "OnePlus Nord CE 3",
+      "brand": "OnePlus",
+      "model": "CPH2465",
+      "price": 1450000,
+      "price_formatted": "UGX 1,450,000",
+      "condition": "New",
+      "storage": "128GB",
+      "ram": "8GB",
+      "color": "Gray Ash",
+      "battery_health": "100%",
+      "warranty": "12 months",
+      "image_url": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce-3.jpg",
+      "images": [
+        "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce-3.jpg"
+      ],
+      "description": "Smooth performance with OxygenOS.",
+      "features": [
+        "6.7-inch AMOLED 120Hz",
+        "Snapdragon 782G",
+        "50MP triple camera",
+        "5000mAh battery",
+        "80W fast charging",
+        "OxygenOS 13"
+      ],
+      "in_stock": true,
+      "quantity": 4
     }
   ]
 }
