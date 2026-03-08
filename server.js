@@ -9,8 +9,10 @@ const port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// IMPORTANT: Serve static files from public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Middleware
-app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -65,7 +67,6 @@ app.get('/contact', (req, res) => {
 
 app.post('/contact', (req, res) => {
   console.log('Contact form:', req.body);
-  // Here you would typically send an email or save to database
   res.redirect('/contact?success=true');
 });
 
@@ -76,4 +77,5 @@ app.use((req, res) => {
 
 app.listen(port, () => {
   console.log(`Bunjoz Hub running on port ${port}`);
+  console.log(`Static files served from: ${path.join(__dirname, 'public')}`);
 });
