@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= phone.name %> - <%= config.business.name %></title>
+  <meta name="description" content="<%= phone.description %>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -12,24 +16,39 @@
   <nav class="navbar">
     <div class="container">
       <div class="logo">
-        <a href="/"><%= config.business.name %></a>
+        <a href="/">
+          <%= config.business.name %>
+          <span>by <%= config.business.owner %></span>
+        </a>
       </div>
-      <ul class="nav-links">
+      
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <ul class="nav-links" id="navLinks">
         <li><a href="/">Home</a></li>
         <li><a href="/repair">Repair</a></li>
         <li><a href="/sales" class="active">Phones</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
+      
       <div class="phone-header">
-        <a href="tel:<%= config.contact.phone %>"><i class="fas fa-phone"></i> <%= config.contact.phone_display %></a>
+        <a href="tel:<%= config.contact.phone %>">
+          <i class="fas fa-phone-alt"></i> Call Now
+        </a>
       </div>
     </div>
   </nav>
 
   <!-- Breadcrumb -->
-  <div class="breadcrumb">
+  <div style="background: var(--light); padding: 1rem 0;">
     <div class="container">
-      <a href="/">Home</a> > <a href="/sales">Phones</a> > <span><%= phone.name %></span>
+      <a href="/" style="color: var(--gray); text-decoration: none;">Home</a>
+      <i class="fas fa-chevron-right" style="color: var(--gray); margin: 0 0.5rem; font-size: 0.8rem;"></i>
+      <a href="/sales" style="color: var(--gray); text-decoration: none;">Phones</a>
+      <i class="fas fa-chevron-right" style="color: var(--gray); margin: 0 0.5rem; font-size: 0.8rem;"></i>
+      <span style="color: var(--dark); font-weight: 500;"><%= phone.name %></span>
     </div>
   </div>
 
@@ -37,61 +56,88 @@
   <section class="phone-detail">
     <div class="container">
       <div class="detail-layout">
-        <!-- Image -->
-        <div class="detail-image">
-          <img src="<%= phone.image %>" alt="<%= phone.name %>" onerror="this.src='<%= config.images.default_phone %>'">
-        </div>
-        
-        <!-- Info -->
-        <div class="detail-info">
-          <h1><%= phone.name %></h1>
+        <!-- Image Gallery -->
+        <div class="detail-gallery">
+          <div class="main-image">
+            <img src="<%= phone.image %>" alt="<%= phone.name %>" id="mainImage" onerror="this.src='<%= config.images.default_phone %>'">
+          </div>
           
-          <div class="detail-badges">
-            <span class="condition-badge <%= phone.condition.toLowerCase() %>"><%= phone.condition %></span>
-            <% if (phone.in_stock) { %>
-              <span class="stock-badge in-stock"><i class="fas fa-check-circle"></i> In Stock</span>
+          <div class="thumbnail-grid">
+            <div class="thumbnail active" onclick="document.getElementById('mainImage').src='<%= phone.image %>'">
+              <img src="<%= phone.image %>" alt="<%= phone.name %>">
+            </div>
+            <% if (phone.images && phone.images.length > 0) { %>
+              <% phone.images.forEach(img => { %>
+                <div class="thumbnail" onclick="document.getElementById('mainImage').src='<%= img %>'">
+                  <img src="<%= img %>" alt="<%= phone.name %>">
+                </div>
+              <% }); %>
             <% } else { %>
-              <span class="stock-badge out-stock"><i class="fas fa-times-circle"></i> Out of Stock</span>
+              <!-- Repeat main image as placeholder for additional angles -->
+              <div class="thumbnail" onclick="document.getElementById('mainImage').src='<%= phone.image %>'">
+                <img src="<%= phone.image %>" alt="<%= phone.name %>">
+              </div>
+              <div class="thumbnail" onclick="document.getElementById('mainImage').src='<%= phone.image %>'">
+                <img src="<%= phone.image %>" alt="<%= phone.name %>">
+              </div>
+              <div class="thumbnail" onclick="document.getElementById('mainImage').src='<%= phone.image %>'">
+                <img src="<%= phone.image %>" alt="<%= phone.name %>">
+              </div>
             <% } %>
           </div>
-
+        </div>
+        
+        <!-- Phone Info -->
+        <div class="detail-info">
+          <div class="detail-header">
+            <h1><%= phone.name %></h1>
+            <div class="detail-badges">
+              <span class="condition-badge <%= phone.condition.toLowerCase() %>"><%= phone.condition %></span>
+              <% if (phone.in_stock) { %>
+                <span class="stock-badge in-stock"><i class="fas fa-check-circle"></i> In Stock (<%= phone.quantity %> available)</span>
+              <% } else { %>
+                <span class="stock-badge out-stock"><i class="fas fa-times-circle"></i> Out of Stock</span>
+              <% } %>
+            </div>
+          </div>
+          
           <div class="detail-price">
             <h2><%= phone.price_formatted %></h2>
             <% if (phone.warranty) { %>
-              <p><i class="fas fa-shield-alt"></i> <%= phone.warranty %> warranty</p>
+              <p><i class="fas fa-shield-alt"></i> <%= phone.warranty %> warranty included</p>
             <% } %>
           </div>
-
+          
           <div class="detail-specs">
-            <div class="spec-row">
-              <span class="spec-label">Brand:</span>
+            <div class="spec-item">
+              <span class="spec-label">Brand</span>
               <span class="spec-value"><%= phone.brand %></span>
             </div>
-            <div class="spec-row">
-              <span class="spec-label">Storage:</span>
+            <div class="spec-item">
+              <span class="spec-label">Storage</span>
               <span class="spec-value"><%= phone.storage %></span>
             </div>
-            <div class="spec-row">
-              <span class="spec-label">RAM:</span>
+            <div class="spec-item">
+              <span class="spec-label">RAM</span>
               <span class="spec-value"><%= phone.ram %></span>
             </div>
-            <div class="spec-row">
-              <span class="spec-label">Color:</span>
+            <div class="spec-item">
+              <span class="spec-label">Color</span>
               <span class="spec-value"><%= phone.color %></span>
             </div>
             <% if (phone.battery_health) { %>
-            <div class="spec-row">
-              <span class="spec-label">Battery Health:</span>
+            <div class="spec-item">
+              <span class="spec-label">Battery Health</span>
               <span class="spec-value"><%= phone.battery_health %></span>
             </div>
             <% } %>
           </div>
-
+          
           <div class="detail-description">
             <h3>Description</h3>
             <p><%= phone.description %></p>
           </div>
-
+          
           <div class="detail-features">
             <h3>Key Features</h3>
             <ul>
@@ -100,16 +146,34 @@
               <% }); %>
             </ul>
           </div>
-
+          
           <div class="detail-actions">
             <a href="tel:<%= config.contact.phone %>" class="btn btn-primary btn-large">
-              <i class="fas fa-phone"></i> Call to Inquire
+              <i class="fas fa-phone"></i> Call <%= config.business.owner %>
             </a>
-            <a href="<%= config.social.whatsapp %>?text=I'm%20interested%20in%20the%20<%= encodeURIComponent(phone.name) %>" class="btn btn-success btn-large">
+            <a href="<%= config.social.whatsapp %>?text=I'm%20interested%20in%20the%20<%= encodeURIComponent(phone.name) %>%20for%20<%= encodeURIComponent(phone.price_formatted) %>" class="btn btn-success btn-large">
               <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
           </div>
+          
+          <div style="margin-top: 2rem; padding: 1rem; background: var(--light); border-radius: 10px; text-align: center;">
+            <i class="fas fa-store" style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+            <p style="color: var(--gray);">Visit our shop on Kampala Road to see this phone in person. Ask for <strong><%= config.business.owner %></strong>!</p>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Phones -->
+  <section class="featured-section" style="background: var(--light);">
+    <div class="container">
+      <h2 class="section-title">You Might Also Like</h2>
+      <p class="section-subtitle">More phones handpicked by <%= config.business.owner %></p>
+      
+      <div class="phones-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <!-- You would typically fetch related phones here -->
+        <!-- This is a placeholder - in a real app you'd query similar phones -->
       </div>
     </div>
   </section>
@@ -120,29 +184,52 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3><%= config.business.name %></h3>
+          <p>Owned and operated by <%= config.business.owner %></p>
           <p><%= config.business.description %></p>
+          <div class="social-links">
+            <a href="<%= config.social.facebook %>"><i class="fab fa-facebook-f"></i></a>
+            <a href="<%= config.social.instagram %>"><i class="fab fa-instagram"></i></a>
+            <a href="<%= config.social.twitter %>"><i class="fab fa-twitter"></i></a>
+            <a href="<%= config.social.whatsapp %>"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
+        
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/repair">Repair</a></li>
-            <li><a href="/sales">Phones</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="/repair"><i class="fas fa-chevron-right"></i> Repair Services</a></li>
+            <li><a href="/sales"><i class="fas fa-chevron-right"></i> Phones for Sale</a></li>
+            <li><a href="/contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
           </ul>
         </div>
+        
         <div class="footer-section">
-          <h4>Contact</h4>
-          <p><i class="fas fa-phone"></i> <a href="tel:<%= config.contact.phone %>"><%= config.contact.phone_display %></a></p>
-          <p><i class="fas fa-map-marker"></i> <%= config.contact.address %></p>
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> <%= config.contact.address %></li>
+            <li><i class="fas fa-phone"></i> <a href="tel:<%= config.contact.phone %>"><%= config.contact.phone_display %></a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:<%= config.contact.email %>"><%= config.contact.email %></a></li>
+            <li><i class="fas fa-clock"></i> Mon-Fri: <%= config.hours.monday_friday %></li>
+          </ul>
         </div>
       </div>
+      
       <div class="footer-bottom">
-        <p>&copy; <%= new Date().getFullYear() %> <%= config.business.name %>. All rights reserved.</p>
+        <p>&copy; <%= new Date().getFullYear() %> <%= config.business.name %>. Created with <i class="fas fa-heart" style="color: #ef4444;"></i> by <%= config.business.owner %>. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script src="/script.js"></script>
+  <script>
+    // Thumbnail gallery
+    document.querySelectorAll('.thumbnail').forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>

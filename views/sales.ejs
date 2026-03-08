@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phones for Sale - <%= config.business.name %></title>
+  <meta name="description" content="Quality new and refurbished phones for sale by <%= config.business.owner %>. iPhone, Samsung, Tecno and more with warranty.">
+  <meta name="keywords" content="phones for sale, iPhone, Samsung, Tecno, refurbished phones, new phones, Kampala">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -12,49 +17,82 @@
   <nav class="navbar">
     <div class="container">
       <div class="logo">
-        <a href="/"><%= config.business.name %></a>
+        <a href="/">
+          <%= config.business.name %>
+          <span>by <%= config.business.owner %></span>
+        </a>
       </div>
-      <ul class="nav-links">
+      
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <ul class="nav-links" id="navLinks">
         <li><a href="/">Home</a></li>
         <li><a href="/repair">Repair</a></li>
         <li><a href="/sales" class="active">Phones</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
+      
       <div class="phone-header">
-        <a href="tel:<%= config.contact.phone %>"><i class="fas fa-phone"></i> <%= config.contact.phone_display %></a>
+        <a href="tel:<%= config.contact.phone %>">
+          <i class="fas fa-phone-alt"></i> Call Now
+        </a>
       </div>
     </div>
   </nav>
 
   <!-- Page Header -->
-  <section class="page-header">
+  <section class="page-header" style="background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);">
     <div class="container">
       <h1>Phones for Sale</h1>
-      <p>Quality new and refurbished phones with warranty</p>
+      <p>Quality new and refurbished phones - handpicked by <%= config.business.owner %></p>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="features-section" style="padding: 2rem 0; background: white;">
+    <div class="container">
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn-outline filter-btn active" data-filter="all">All Phones</button>
+        <button class="btn btn-outline filter-btn" data-filter="new">New Only</button>
+        <button class="btn btn-outline filter-btn" data-filter="refurbished">Refurbished</button>
+        <select id="brandFilter" class="btn btn-outline" style="padding: 0.875rem 2rem;">
+          <option value="all">All Brands</option>
+          <% config.brands.forEach(brand => { %>
+            <option value="<%= brand.name.toLowerCase() %>"><%= brand.name %></option>
+          <% }); %>
+        </select>
+      </div>
     </div>
   </section>
 
   <!-- Phones Grid -->
-  <section class="phones-section">
+  <section class="featured-section">
     <div class="container">
       <% if (phones.length === 0) { %>
-        <div class="no-results">
-          <i class="fas fa-search"></i>
+        <div class="no-results" style="text-align: center; padding: 4rem;">
+          <i class="fas fa-search" style="font-size: 3rem; color: var(--gray); margin-bottom: 1rem;"></i>
           <h3>No phones found</h3>
+          <p>Try adjusting your filters or check back later</p>
+          <a href="/sales" class="btn btn-primary mt-2">View All Phones</a>
         </div>
       <% } else { %>
-        <div class="phones-grid">
+        <div class="phones-grid" id="phonesGrid">
           <% phones.forEach(phone => { %>
-            <div class="phone-card">
+            <div class="phone-card" data-condition="<%= phone.condition.toLowerCase() %>" data-brand="<%= phone.brand.toLowerCase() %>">
               <div class="phone-image">
                 <img src="<%= phone.image %>" alt="<%= phone.name %>" onerror="this.src='<%= config.images.default_phone %>'">
                 <span class="condition-badge <%= phone.condition.toLowerCase() %>"><%= phone.condition %></span>
+                <% if (!phone.in_stock) { %>
+                  <span style="position: absolute; top: 1rem; left: 1rem; background: var(--danger); color: white; padding: 0.35rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600;">Out of Stock</span>
+                <% } %>
               </div>
               <div class="phone-info">
                 <h3><%= phone.name %></h3>
                 <div class="phone-specs">
                   <span><i class="fas fa-microchip"></i> <%= phone.storage %></span>
-                  <span><i class="fas fa-memory"></i> <%= phone.ram %> RAM</span>
+                  <span><i class="fas fa-memory"></i> <%= phone.ram %></span>
                   <span><i class="fas fa-palette"></i> <%= phone.color %></span>
                 </div>
                 <div class="phone-price"><%= phone.price_formatted %></div>
@@ -67,35 +105,145 @@
     </div>
   </section>
 
+  <!-- Why Buy From Us -->
+  <section class="features-section" style="background: var(--light);">
+    <div class="container">
+      <h2 class="section-title">Why Buy From <%= config.business.owner %>?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3>Genuine Products</h3>
+          <p>All phones are authentic and thoroughly tested</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Warranty Included</h3>
+          <p>Every phone comes with warranty for peace of mind</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3>Personal Service</h3>
+          <p><%= config.business.owner %> personally inspects every phone</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h3>Fair Prices</h3>
+          <p>Best prices in Kampala with no hidden fees</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Looking for a Specific Phone?</h2>
+      <p>Call <%= config.business.owner %> directly - we might have what you're looking for!</p>
+      <div class="cta-buttons">
+        <a href="tel:<%= config.contact.phone %>" class="btn btn-light btn-large">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+        <a href="<%= config.social.whatsapp %>" class="btn btn-success btn-large">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
           <h3><%= config.business.name %></h3>
+          <p>Owned and operated by <%= config.business.owner %></p>
           <p><%= config.business.description %></p>
+          <div class="social-links">
+            <a href="<%= config.social.facebook %>"><i class="fab fa-facebook-f"></i></a>
+            <a href="<%= config.social.instagram %>"><i class="fab fa-instagram"></i></a>
+            <a href="<%= config.social.twitter %>"><i class="fab fa-twitter"></i></a>
+            <a href="<%= config.social.whatsapp %>"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
+        
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/repair">Repair</a></li>
-            <li><a href="/sales">Phones</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="/repair"><i class="fas fa-chevron-right"></i> Repair Services</a></li>
+            <li><a href="/sales"><i class="fas fa-chevron-right"></i> Phones for Sale</a></li>
+            <li><a href="/contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
           </ul>
         </div>
+        
         <div class="footer-section">
-          <h4>Contact</h4>
-          <p><i class="fas fa-phone"></i> <a href="tel:<%= config.contact.phone %>"><%= config.contact.phone_display %></a></p>
-          <p><i class="fas fa-map-marker"></i> <%= config.contact.address %></p>
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> <%= config.contact.address %></li>
+            <li><i class="fas fa-phone"></i> <a href="tel:<%= config.contact.phone %>"><%= config.contact.phone_display %></a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:<%= config.contact.email %>"><%= config.contact.email %></a></li>
+            <li><i class="fas fa-clock"></i> Mon-Fri: <%= config.hours.monday_friday %></li>
+          </ul>
         </div>
       </div>
+      
       <div class="footer-bottom">
-        <p>&copy; <%= new Date().getFullYear() %> <%= config.business.name %>. All rights reserved.</p>
+        <p>&copy; <%= new Date().getFullYear() %> <%= config.business.name %>. Created with <i class="fas fa-heart" style="color: #ef4444;"></i> by <%= config.business.owner %>. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script src="/script.js"></script>
+  <script>
+    // Filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const brandFilter = document.getElementById('brandFilter');
+      const phonesGrid = document.getElementById('phonesGrid');
+      const phoneCards = document.querySelectorAll('.phone-card');
+      
+      function filterPhones() {
+        const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+        const selectedBrand = brandFilter?.value || 'all';
+        
+        phoneCards.forEach(card => {
+          const condition = card.dataset.condition;
+          const brand = card.dataset.brand;
+          
+          const conditionMatch = activeFilter === 'all' || condition === activeFilter;
+          const brandMatch = selectedBrand === 'all' || brand === selectedBrand;
+          
+          if (conditionMatch && brandMatch) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+      
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          filterPhones();
+        });
+      });
+      
+      if (brandFilter) {
+        brandFilter.addEventListener('change', filterPhones);
+      }
+    });
+  </script>
 </body>
 </html>

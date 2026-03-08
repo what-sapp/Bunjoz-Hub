@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phone Repair - <%= config.business.name %></title>
+  <title>Phone Repair Services - <%= config.business.name %></title>
+  <meta name="description" content="Professional phone repair services by <%= config.business.owner %>. Screen replacement, battery repair, water damage fix and more.">
+  <meta name="keywords" content="phone repair, screen replacement, battery repair, water damage repair, Kampala">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -12,33 +17,44 @@
   <nav class="navbar">
     <div class="container">
       <div class="logo">
-        <a href="/"><%= config.business.name %></a>
+        <a href="/">
+          <%= config.business.name %>
+          <span>by <%= config.business.owner %></span>
+        </a>
       </div>
-      <ul class="nav-links">
+      
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <ul class="nav-links" id="navLinks">
         <li><a href="/">Home</a></li>
         <li><a href="/repair" class="active">Repair</a></li>
         <li><a href="/sales">Phones</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
+      
       <div class="phone-header">
-        <a href="tel:<%= config.contact.phone %>"><i class="fas fa-phone"></i> <%= config.contact.phone_display %></a>
+        <a href="tel:<%= config.contact.phone %>">
+          <i class="fas fa-phone-alt"></i> Call Now
+        </a>
       </div>
     </div>
   </nav>
 
   <!-- Page Header -->
-  <section class="page-header">
+  <section class="page-header" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);">
     <div class="container">
       <h1>Phone Repair Services</h1>
-      <p>Professional repairs for all major brands and models</p>
+      <p>Professional repairs by <%= config.business.owner %> and team</p>
     </div>
   </section>
 
-  <!-- Services Grid -->
+  <!-- All Services Section -->
   <section class="services-section">
     <div class="container">
       <div class="services-grid">
-        <% services.forEach(service => { %>
+        <% config.services.forEach(service => { %>
           <div class="service-card">
             <div class="service-icon">
               <i class="<%= service.icon %>"></i>
@@ -50,9 +66,53 @@
                 <span><i class="fas fa-check"></i> <%= feature %></span>
               <% }); %>
             </div>
-            <a href="/contact" class="service-btn">Inquire Now</a>
+            <a href="/contact?service=<%= encodeURIComponent(service.name) %>" class="service-btn">
+              Inquire Now <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="features-section" style="background: var(--light);">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Simple 4-step repair process</p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" style="background: var(--primary);">
+            <i class="fas fa-walk-in"></i>
+          </div>
+          <h3>1. Bring Your Phone</h3>
+          <p>Visit our shop on Kampala Road. We're open 7 days a week.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon" style="background: var(--primary);">
+            <i class="fas fa-stethoscope"></i>
+          </div>
+          <h3>2. Free Diagnosis</h3>
+          <p>We'll diagnose the issue for free and give you a quote.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon" style="background: var(--primary);">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>3. Quick Repair</h3>
+          <p>Most repairs take just 1-2 hours while you wait.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon" style="background: var(--primary);">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>4. Warranty</h3>
+          <p>All repairs come with warranty for your peace of mind.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -60,41 +120,80 @@
   <!-- Brands Section -->
   <section class="brands-section">
     <div class="container">
-      <h2>Brands We Repair</h2>
+      <h2 class="section-title">Brands We Repair</h2>
+      <p class="section-subtitle">We fix all major brands</p>
+      
       <div class="brands-grid">
         <% config.brands.forEach(brand => { %>
-          <div class="brand-item"><%= brand %></div>
-        <% }); %>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="why-us">
-    <div class="container">
-      <h2>Why Choose <%= config.business.name %>?</h2>
-      <div class="features-grid">
-        <% config.features.forEach(feature => { %>
-          <div class="feature">
-            <i class="fas fa-check-circle"></i>
-            <span><%= feature %></span>
+          <div class="brand-item">
+            <i class="<%= brand.icon %>"></i>
+            <span><%= brand.name %></span>
           </div>
         <% }); %>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- Why Choose Us -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us?</h2>
+      <div class="features-grid">
+        <% config.features.forEach(feature => { %>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="<%= feature.icon %>"></i>
+            </div>
+            <h3><%= feature.title %></h3>
+            <p><%= feature.description %></p>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="services-section" style="background: var(--light);">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="services-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="service-card">
+          <h3>How long does repair take?</h3>
+          <p>Most common repairs like screen or battery replacement take 1-2 hours. Complex repairs may take longer, but we'll keep you updated.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Do you offer warranty?</h3>
+          <p>Yes! All our repairs come with warranty. Screen repairs have 3 months warranty, battery replacements have 6 months.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>What brands do you fix?</h3>
+          <p>We fix all major brands including iPhone, Samsung, Tecno, Infinix, Itel, Huawei, and more.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Do I need an appointment?</h3>
+          <p>Walk-ins are welcome! But you can also call ahead and <%= config.business.owner %> will prepare for your visit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
-      <h2>Need a repair?</h2>
-      <p>Visit our shop or call us for quick assistance</p>
+      <h2>Ready to Fix Your Phone?</h2>
+      <p>Visit <%= config.business.name %> today - <%= config.business.owner %> is here to help!</p>
       <div class="cta-buttons">
-        <a href="tel:<%= config.contact.phone %>" class="btn btn-primary">
+        <a href="tel:<%= config.contact.phone %>" class="btn btn-light btn-large">
           <i class="fas fa-phone"></i> Call Now
         </a>
-        <a href="<%= config.social.whatsapp %>" class="btn btn-success">
+        <a href="<%= config.social.whatsapp %>" class="btn btn-success btn-large">
           <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="/contact" class="btn btn-outline btn-large" style="border-color: white; color: white;">
+          <i class="fas fa-map-marker-alt"></i> Find Us
         </a>
       </div>
     </div>
@@ -106,25 +205,39 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3><%= config.business.name %></h3>
+          <p>Owned and operated by <%= config.business.owner %></p>
           <p><%= config.business.description %></p>
+          <div class="social-links">
+            <a href="<%= config.social.facebook %>"><i class="fab fa-facebook-f"></i></a>
+            <a href="<%= config.social.instagram %>"><i class="fab fa-instagram"></i></a>
+            <a href="<%= config.social.twitter %>"><i class="fab fa-twitter"></i></a>
+            <a href="<%= config.social.whatsapp %>"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
+        
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/repair">Repair</a></li>
-            <li><a href="/sales">Phones</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="/repair"><i class="fas fa-chevron-right"></i> Repair Services</a></li>
+            <li><a href="/sales"><i class="fas fa-chevron-right"></i> Phones for Sale</a></li>
+            <li><a href="/contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
           </ul>
         </div>
+        
         <div class="footer-section">
-          <h4>Contact</h4>
-          <p><i class="fas fa-phone"></i> <a href="tel:<%= config.contact.phone %>"><%= config.contact.phone_display %></a></p>
-          <p><i class="fas fa-map-marker"></i> <%= config.contact.address %></p>
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> <%= config.contact.address %></li>
+            <li><i class="fas fa-phone"></i> <a href="tel:<%= config.contact.phone %>"><%= config.contact.phone_display %></a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:<%= config.contact.email %>"><%= config.contact.email %></a></li>
+            <li><i class="fas fa-clock"></i> Mon-Fri: <%= config.hours.monday_friday %></li>
+          </ul>
         </div>
       </div>
+      
       <div class="footer-bottom">
-        <p>&copy; <%= new Date().getFullYear() %> <%= config.business.name %>. All rights reserved.</p>
+        <p>&copy; <%= new Date().getFullYear() %> <%= config.business.name %>. Created with <i class="fas fa-heart" style="color: #ef4444;"></i> by <%= config.business.owner %>. All rights reserved.</p>
       </div>
     </div>
   </footer>
