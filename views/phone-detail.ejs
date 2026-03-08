@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= phone.name %> - <%= config.business.name %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="/"><%= config.business.name %></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/repair">Repair</a></li>
+        <li><a href="/sales" class="active">Phones</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <div class="phone-header">
+        <a href="tel:<%= config.contact.phone %>"><i class="fas fa-phone"></i> <%= config.contact.phone_display %></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="/">Home</a> > <a href="/sales">Phones</a> > <span><%= phone.name %></span>
+    </div>
+  </div>
+
+  <!-- Phone Detail -->
+  <section class="phone-detail">
+    <div class="container">
+      <div class="detail-layout">
+        <!-- Image -->
+        <div class="detail-image">
+          <img src="<%= phone.image %>" alt="<%= phone.name %>" onerror="this.src='<%= config.images.default_phone %>'">
+        </div>
+        
+        <!-- Info -->
+        <div class="detail-info">
+          <h1><%= phone.name %></h1>
+          
+          <div class="detail-badges">
+            <span class="condition-badge <%= phone.condition.toLowerCase() %>"><%= phone.condition %></span>
+            <% if (phone.in_stock) { %>
+              <span class="stock-badge in-stock"><i class="fas fa-check-circle"></i> In Stock</span>
+            <% } else { %>
+              <span class="stock-badge out-stock"><i class="fas fa-times-circle"></i> Out of Stock</span>
+            <% } %>
+          </div>
+
+          <div class="detail-price">
+            <h2><%= phone.price_formatted %></h2>
+            <% if (phone.warranty) { %>
+              <p><i class="fas fa-shield-alt"></i> <%= phone.warranty %> warranty</p>
+            <% } %>
+          </div>
+
+          <div class="detail-specs">
+            <div class="spec-row">
+              <span class="spec-label">Brand:</span>
+              <span class="spec-value"><%= phone.brand %></span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Storage:</span>
+              <span class="spec-value"><%= phone.storage %></span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">RAM:</span>
+              <span class="spec-value"><%= phone.ram %></span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Color:</span>
+              <span class="spec-value"><%= phone.color %></span>
+            </div>
+            <% if (phone.battery_health) { %>
+            <div class="spec-row">
+              <span class="spec-label">Battery Health:</span>
+              <span class="spec-value"><%= phone.battery_health %></span>
+            </div>
+            <% } %>
+          </div>
+
+          <div class="detail-description">
+            <h3>Description</h3>
+            <p><%= phone.description %></p>
+          </div>
+
+          <div class="detail-features">
+            <h3>Key Features</h3>
+            <ul>
+              <% phone.features.forEach(feature => { %>
+                <li><i class="fas fa-check-circle"></i> <%= feature %></li>
+              <% }); %>
+            </ul>
+          </div>
+
+          <div class="detail-actions">
+            <a href="tel:<%= config.contact.phone %>" class="btn btn-primary btn-large">
+              <i class="fas fa-phone"></i> Call to Inquire
+            </a>
+            <a href="<%= config.social.whatsapp %>?text=I'm%20interested%20in%20the%20<%= encodeURIComponent(phone.name) %>" class="btn btn-success btn-large">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><%= config.business.name %></h3>
+          <p><%= config.business.description %></p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/repair">Repair</a></li>
+            <li><a href="/sales">Phones</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p><i class="fas fa-phone"></i> <a href="tel:<%= config.contact.phone %>"><%= config.contact.phone_display %></a></p>
+          <p><i class="fas fa-map-marker"></i> <%= config.contact.address %></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <%= new Date().getFullYear() %> <%= config.business.name %>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
