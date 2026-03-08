@@ -35,7 +35,7 @@ module.exports = {
     whatsapp: 'https://wa.me/256703753787'
   },
   
-  // Images (using professional placeholder images)
+  // Images
   images: {
     logo: 'https://via.placeholder.com/180x60/2c3e50/ffffff?text=Bunjoz+Hub',
     hero: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=1200',
@@ -85,36 +85,88 @@ module.exports = {
       icon: 'fas fa-code',
       description: 'Phone frozen, boot loop, or software problems? We can fix it.',
       features: ['OS reinstallation', 'Virus removal', 'Boot loop fix', 'Data backup']
+    },
+    {
+      name: 'Speaker & Mic Repair',
+      icon: 'fas fa-volume-up',
+      description: 'No sound or others cant hear you? We fix all audio issues.',
+      features: ['Speaker repair', 'Microphone fix', 'Audio IC repair', 'Quick service']
+    },
+    {
+      name: 'Back Cover Replacement',
+      icon: 'fas fa-tablet-alt',
+      description: 'Broken back glass or plastic cover? We replace it with original quality parts.',
+      features: ['Glass back', 'Plastic back', 'Metal back', 'Color matching']
     }
   ],
   
-  // Brands we work with
+  // UGANDA & AFRICA BRANDS - Comprehensive List (30+ Brands)
   brands: [
-    { name: 'iPhone', icon: 'fab fa-apple' },
+    // Premium/International Brands
+    { name: 'iPhone (Apple)', icon: 'fab fa-apple' },
     { name: 'Samsung', icon: 'fas fa-mobile-alt' },
+    { name: 'Google Pixel', icon: 'fab fa-google' },
+    { name: 'Nokia', icon: 'fas fa-mobile-alt' },
+    { name: 'Sony Xperia', icon: 'fab fa-sony' },
+    { name: 'Motorola', icon: 'fas fa-mobile-alt' },
+    { name: 'HTC', icon: 'fas fa-mobile-alt' },
+    { name: 'LG', icon: 'fas fa-mobile-alt' },
+    { name: 'BlackBerry', icon: 'fas fa-mobile-alt' },
+    
+    // Chinese Brands - Very Popular in Uganda
     { name: 'Tecno', icon: 'fas fa-mobile-alt' },
     { name: 'Infinix', icon: 'fas fa-mobile-alt' },
     { name: 'Itel', icon: 'fas fa-mobile-alt' },
     { name: 'Huawei', icon: 'fas fa-mobile-alt' },
-    { name: 'Nokia', icon: 'fas fa-mobile-alt' },
-    { name: 'Google', icon: 'fab fa-google' }
+    { name: 'Oppo', icon: 'fas fa-mobile-alt' },
+    { name: 'Vivo', icon: 'fas fa-mobile-alt' },
+    { name: 'Xiaomi', icon: 'fas fa-mobile-alt' },
+    { name: 'Redmi', icon: 'fas fa-mobile-alt' },
+    { name: 'Realme', icon: 'fas fa-mobile-alt' },
+    { name: 'OnePlus', icon: 'fas fa-mobile-alt' },
+    { name: 'ZTE', icon: 'fas fa-mobile-alt' },
+    { name: 'Lenovo', icon: 'fas fa-laptop' },
+    
+    // African & Local Brands
+    { name: 'Mara Phone', icon: 'fas fa-mobile-alt' },
+    { name: 'Oraimo', icon: 'fas fa-mobile-alt' },
+    { name: 'Carlcare', icon: 'fas fa-tools' },
+    
+    // Budget/Local Favorites
+    { name: 'Gionee', icon: 'fas fa-mobile-alt' },
+    { name: 'QMobile', icon: 'fas fa-mobile-alt' },
+    { name: 'Micromax', icon: 'fas fa-mobile-alt' },
+    { name: 'Lava', icon: 'fas fa-mobile-alt' },
+    { name: 'Karbonn', icon: 'fas fa-mobile-alt' },
+    { name: 'Spice', icon: 'fas fa-mobile-alt' },
+    
+    // Feature Phones (still popular in Uganda)
+    { name: 'Nokia 3310', icon: 'fas fa-phone' },
+    { name: 'Tecno Pop', icon: 'fas fa-phone' },
+    { name: 'Itel King', icon: 'fas fa-phone' },
+    
+    // Tablet Brands
+    { name: 'iPad (Apple)', icon: 'fab fa-apple' },
+    { name: 'Samsung Tab', icon: 'fas fa-tablet-alt' },
+    { name: 'Tecno Pad', icon: 'fas fa-tablet-alt' },
+    { name: 'Infinix Pad', icon: 'fas fa-tablet-alt' }
   ],
   
   // Features/Why choose us
   features: [
     {
       title: 'Expert Technicians',
-      description: 'Years of experience with all phone models',
+      description: 'Years of experience with all phone models including Tecno, Infinix, iPhone and Samsung',
       icon: 'fas fa-user-tie'
     },
     {
       title: 'Genuine Parts',
-      description: 'We use only quality replacement parts',
+      description: 'We use only quality replacement parts for all brands',
       icon: 'fas fa-check-double'
     },
     {
       title: 'Fast Service',
-      description: 'Most repairs done within 1-2 hours',
+      description: 'Most repairs done within 1-2 hours while you wait',
       icon: 'fas fa-clock'
     },
     {
@@ -124,13 +176,23 @@ module.exports = {
     },
     {
       title: 'Fair Prices',
-      description: 'Transparent pricing, no hidden fees',
+      description: 'Best prices in Kampala, no hidden fees',
       icon: 'fas fa-tags'
     },
     {
       title: 'Free Diagnostics',
-      description: 'We diagnose your phone for free',
+      description: 'We diagnose your phone for free, no obligation',
       icon: 'fas fa-stethoscope'
+    },
+    {
+      title: 'All Brands Supported',
+      description: 'From iPhone to Tecno, we fix them all - over 30 brands!',
+      icon: 'fas fa-globe-africa'
+    },
+    {
+      title: 'Genuine Accessories',
+      description: 'Original chargers, cases, and more',
+      icon: 'fas fa-headphones'
     }
   ],
   
@@ -138,7 +200,7 @@ module.exports = {
   testimonials: [
     {
       name: 'Sarah K.',
-      comment: 'Best phone repair in Kampala! Fixed my iPhone screen in just 1 hour.',
+      comment: 'Best phone repair in Kampala! Fixed my iPhone screen in just 1 hour. Derick knows his stuff!',
       rating: 5
     },
     {
@@ -148,23 +210,48 @@ module.exports = {
     },
     {
       name: 'Peter W.',
-      comment: 'Professional service, fair prices. Derick knows his stuff!',
+      comment: 'My Tecno Camon had water damage. They fixed it like new. Thank you Bunjoz Hub!',
+      rating: 5
+    },
+    {
+      name: 'Grace A.',
+      comment: 'Best place for Infinix repairs in Kampala. Fair prices and quick service.',
+      rating: 5
+    },
+    {
+      name: 'Robert T.',
+      comment: 'Got my Nokia revived here. They have parts others don\'t. Derick is a legend!',
+      rating: 5
+    },
+    {
+      name: 'Martha N.',
+      comment: 'Bought an Itel phone for my mum. Great price and they even helped set it up.',
+      rating: 5
+    },
+    {
+      name: 'David O.',
+      comment: 'They fixed my Huawei P30 screen in 2 hours. Perfect job!',
+      rating: 5
+    },
+    {
+      name: 'Patience N.',
+      comment: 'Best place for Oppo and Vivo phones in Kampala. Very knowledgeable staff.',
       rating: 5
     }
   ],
   
   // Stats
   stats: [
-    { number: '1000+', label: 'Phones Repaired', icon: 'fas fa-tools' },
-    { number: '500+', label: 'Phones Sold', icon: 'fas fa-shopping-cart' },
-    { number: '5+', label: 'Years Experience', icon: 'fas fa-calendar-alt' },
-    { number: '100%', label: 'Satisfaction', icon: 'fas fa-smile' }
+    { number: '2000+', label: 'Phones Repaired', icon: 'fas fa-tools' },
+    { number: '1000+', label: 'Phones Sold', icon: 'fas fa-shopping-cart' },
+    { number: '30+', label: 'Brands Supported', icon: 'fas fa-mobile-alt' },
+    { number: '100%', label: 'Customer Satisfaction', icon: 'fas fa-smile' }
   ],
   
   // SEO
   seo: {
     title: 'Bunjoz Hub - Phone Repair & Sales in Kampala | Derick',
-    keywords: 'phone repair, phone sales, smartphone repair, iPhone repair, Samsung repair, Kampala, Uganda, Derick',
+    keywords: 'phone repair, phone sales, smartphone repair, iPhone repair, Samsung repair, Tecno repair, Infinix repair, Itel repair, Huawei repair, Kampala, Uganda, Derick, Bunjoz Hub',
     author: 'Derick - Bunjoz Hub'
   }
 };
